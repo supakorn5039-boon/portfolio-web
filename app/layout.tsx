@@ -1,33 +1,27 @@
-import type { Metadata } from "next";
-import { JetBrains_Mono } from "next/font/google";
-import "./globals.css";
-import Header from "@/components/Header/Header";
-import PageTransition from "@/components/PageTransition/PageTransition";
-import StairEffectTransition from "@/components/Stair/StairEffectTransition";
+import LayoutClient from '@/components/Layout/LayoutClient';
+import type { Metadata } from 'next';
+import { JetBrains_Mono } from 'next/font/google';
+import './globals.css';
 
 const JetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-  variable: "--font-jetbrainsMono",
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
+  variable: '--font-jetbrainsMono',
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Build a Portfolio App",
+  title: 'Portfolio',
+  description: 'A beautiful portfolio built with Next.js and shadcn/ui',
+  icons: {
+    icon: '/assets/favicon.svg',
+  },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={JetbrainsMono.variable}>
-        <Header />
-        <StairEffectTransition />
-        <PageTransition />
-        {children}
+    <html lang="en" className="h-full">
+      <body className={`${JetbrainsMono.variable} flex flex-col min-h-screen`}>
+        <LayoutClient>{children}</LayoutClient>
       </body>
     </html>
   );

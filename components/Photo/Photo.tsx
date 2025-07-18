@@ -12,7 +12,7 @@ export default function Photo() {
           transition: { delay: 1.5, duration: 0.4, ease: "easeIn" },
         }}
       >
-        <motion.div className="w-[315px] h-[250px] xl:w-[400px] xl:h-[430px] absolute">
+        <motion.div className="w-[315px] h-[220px] xl:w-[400px] xl:h-[410px] absolute">
           <Image
             src="/assets/pho.png"
             priority

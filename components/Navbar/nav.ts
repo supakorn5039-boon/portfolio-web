@@ -7,23 +7,17 @@ export interface NavType {
 export const NavLinks: NavType[] = [
   {
     id: 1,
-    name: "home",
-    path: "/",
+    name: 'home',
+    path: '/',
   },
   {
     id: 2,
-    name: "services",
-    path: "/services",
+    name: 'experience',
+    path: '/experience',
   },
   {
     id: 3,
-    name: "resume",
-    path: "/resume",
+    name: 'skills',
+    path: '/skills',
   },
-  {
-    id: 4,
-    name: "work",
-    path: "/work",
-  },
-  { id: 5, name: "contact", path: "/contact" },
 ];

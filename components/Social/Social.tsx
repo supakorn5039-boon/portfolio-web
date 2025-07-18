@@ -1,7 +1,6 @@
 "usecl";
 import Link from "next/link";
-import { FaGithub, FaLinkedinIn, FaPhone } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+import { FaFacebook, FaGithub, FaInstagram } from "react-icons/fa";
 
 type SocialProps = {
   containerStyles: string;
@@ -15,16 +14,13 @@ export default function Social({ containerStyles, iconStyles }: SocialProps) {
       path: "https://github.com/supakorn5039-boon",
     },
     {
-      icon: <FaLinkedinIn />,
-      path: "",
+      icon: <FaInstagram />,
+      path: "https://www.instagram.com/boonspk_/",
     },
+  
     {
-      icon: <FaPhone />,
-      path: "",
-    },
-    {
-      icon: <MdEmail />,
-      path: "",
+      icon: <FaFacebook />,
+      path: "https://www.facebook.com/supakorn.boon.2024",
     },
   ];
 
